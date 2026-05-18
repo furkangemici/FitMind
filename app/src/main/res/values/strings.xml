@@ -1,3 +1,69 @@
 <resources>
     <string name="app_name">FitMind</string>
+
+    <!-- Onboarding -->
+    <string name="welcome_title">FitMind\'e Hoş Geldin!</string>
+    <string name="welcome_subtitle">Akıllı spor takip asistanın</string>
+    <string name="select_goal">Hedefini Seç</string>
+    <string name="goal_lose_weight">Kilo Vermek</string>
+    <string name="goal_gain_muscle">Kas Kazanmak</string>
+    <string name="goal_burn_fat">Yağ Yakmak</string>
+    <string name="next">Devam Et</string>
+    <string name="back">Geri</string>
+
+    <!-- Profile Setup -->
+    <string name="profile_setup_title">Profilini Oluştur</string>
+    <string name="profile_setup_subtitle">Sana özel program için bilgilerini gir</string>
+    <string name="name_hint">Adın</string>
+    <string name="age_hint">Yaş</string>
+    <string name="weight_hint">Kilo (kg)</string>
+    <string name="height_hint">Boy (cm)</string>
+    <string name="chest_hint">Göğüs ölçüsü (cm)</string>
+    <string name="waist_hint">Bel ölçüsü (cm)</string>
+    <string name="hip_hint">Kalça ölçüsü (cm)</string>
+    <string name="gym_days_hint">Haftada kaç gün spor?</string>
+    <string name="gender_male">Erkek</string>
+    <string name="gender_female">Kadın</string>
+    <string name="save_profile">Profili Kaydet</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">Dashboard</string>
+    <string name="hello_user">Merhaba, %s! 💪</string>
+    <string name="daily_summary">Günlük Özet</string>
+    <string name="workout_card_title">Antrenman</string>
+    <string name="workout_card_desc">AI destekli program oluştur</string>
+    <string name="water_card_title">Su Takibi</string>
+    <string name="water_card_desc">Günlük su tüketimini takip et</string>
+    <string name="nutrition_card_title">Beslenme</string>
+    <string name="nutrition_card_desc">Kalori ve beslenme rehberi</string>
+
+    <!-- Workout -->
+    <string name="workout_selection_title">Program Seçimi</string>
+    <string name="workout_selection_subtitle">AI sana uygun programları öneriyor</string>
+    <string name="loading_ai">AI düşünüyor…</string>
+    <string name="select_program">Bu Programı Seç</string>
+    <string name="workout_plan_title">Antrenman Programın</string>
+    <string name="generating_plan">Program oluşturuluyor…</string>
+
+    <!-- Nutrition -->
+    <string name="nutrition_title">Beslenme Rehberi</string>
+    <string name="daily_calorie">Günlük Kalori İhtiyacı</string>
+    <string name="calorie_value">%d kcal</string>
+    <string name="get_nutrition_plan">Beslenme Planı Al</string>
+    <string name="nutrition_loading">Beslenme planı oluşturuluyor…</string>
+
+    <!-- Water Tracker -->
+    <string name="water_tracker_title">Su Takibi</string>
+    <string name="water_goal">Günlük Hedef: %.1f L</string>
+    <string name="water_consumed">İçilen: %.0f ml</string>
+    <string name="add_water">Su Ekle</string>
+    <string name="water_amount_hint">Miktar (ml)</string>
+    <string name="water_200">200 ml</string>
+    <string name="water_330">330 ml</string>
+    <string name="water_500">500 ml</string>
+
+    <!-- Genel -->
+    <string name="error_occurred">Bir hata oluştu. Tekrar deneyin.</string>
+    <string name="error_empty_fields">Lütfen tüm alanları doldurun.</string>
+    <string name="error_network">İnternet bağlantısını kontrol edin.</string>
 </resources>
