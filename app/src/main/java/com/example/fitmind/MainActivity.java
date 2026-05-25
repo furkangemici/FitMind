@@ -1,24 +1,41 @@
 package com.example.fitmind;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.example.fitmind.db.AppDatabase;
+import com.example.fitmind.ui.main.MainContainerActivity;
+import com.example.fitmind.ui.onboarding.WelcomeActivity;
+import com.example.fitmind.util.SharedPrefsManager;
+
+import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        SharedPrefsManager prefs = new SharedPrefsManager(this);
+        AppDatabase db = AppDatabase.getInstance(this);
+
+        Executors.newSingleThreadExecutor().execute(() -> {
+            boolean hasUser = db.userDao().getLatestProfile() != null;
+
+            runOnUiThread(() -> {
+                if (prefs.isFirstLaunch() || !hasUser) {
+                    prefs.clear();
+                    Intent intent = new Intent(this, WelcomeActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Intent intent = new Intent(this, MainContainerActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
         });
     }
 }
